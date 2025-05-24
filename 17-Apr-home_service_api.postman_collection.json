@@ -1,0 +1,3121 @@
+{
+	"info": {
+		"_postman_id": "951806e6-e8d6-430a-8244-ff11737f030d",
+		"name": "ALL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41967057"
+	},
+	"item": [
+		{
+			"name": "j-F-01-admin-signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"Admin11@\",\n  \"password\": \"Admin11@\",\n  \"firstName\": \"Admin11@\",\n  \"lastName\": \"Admin11@\",\n  \"email\": \"Admin11@yahoo.com\",\n  \"address\": \"Tehran\",\n  \"userType\": \"ADMIN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"signup"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/signup' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"expert1\",\n  \"password\": \"expert11\",\n  \"firstName\": \"expert1\",\n  \"lastName\": \"expert1\",\n  \"email\": \"expert1@yahoo.com\",\n  \"address\": \"Tehran\",\n  \"credit\": 0,\n  \"subCategoryNames\": [\n    \"string\"\n  ],\n  \"userType\": \"EXPERT\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-02-login-admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Admin11@yahoo.com\",\n  \"password\": \"Admin11@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/login' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"email\": \"customer111@yahoo.com\",\n  \"password\": \"customer111\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-03-customer-signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"Customer1@\",\n  \"password\": \"Customer1@\",\n  \"firstName\": \"Customer1@\",\n  \"lastName\": \"Customer1@\",\n  \"email\": \"sanaz.seyedin@yahoo.com\",\n  \"address\": \"Customer1@\",\n  \"credit\": 0,\n  \"userType\": \"CUSTOMER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"signup"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/signup' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"customer1\",\n  \"password\": \"customer1\",\n  \"firstName\": \"customer1\",\n  \"lastName\": \"customer1\",\n  \"email\": \"customer1@yahoo.com\",\n  \"address\": \"customer1\",\n  \"credit\": 0,\n  \"userType\": \"CUSTOMER\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-04-login-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"sanaz.seyedin@yahoo.com\",\n  \"password\": \"Customer1@\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/login' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"email\": \"customer111@yahoo.com\",\n  \"password\": \"customer111\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-05-create-main-category(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYyMjIxMCwiZXhwIjoxNzQ0NzA4NjEwfQ.J_4rMEYHFiPugpOHbFbBKkKGC0paoH5BW4K_MdBenHU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"تاسسیات ساختمان\"\r\n}\r\n{\r\n  \"name\": \"وسایل نقلیه\"\r\n}\r\n{\r\n  \"name\": \"اسباب کشی و باربری\"\r\n}\r\n{\r\n  \"name\": \"لوازم خانگی\"\r\n}\r\n{\r\n  \"name\": \"نظافت و بهداشت\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/create-main-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"create-main-category"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:8080/v1/categories/create-main-category' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"name\": \"clean\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-06-create-sub-category(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYyMjIxMCwiZXhwIjoxNzQ0NzA4NjEwfQ.J_4rMEYHFiPugpOHbFbBKkKGC0paoH5BW4K_MdBenHU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Designer\",\r\n  \"description\": \"Designing interiors with modern and classic styles\",\r\n  \"basePrice\": 1000,\r\n  \"parentName\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"For delete\",\r\n  \"description\": \"Installation and repair of building plumbing systems\",\r\n  \"basePrice\": 800,\r\n  \"parentName\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"For update\",\r\n  \"description\": \"Providing professional car repair and maintenance services\",\r\n  \"basePrice\": 1200,\r\n  \"parentName\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"For add to expert\",\r\n  \"description\": \"Professional packing services for home furniture\",\r\n  \"basePrice\": 500,\r\n  \"parentName\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"For add-categories-to-expert(admin)\",\r\n  \"description\": \"Service and repair of all types of washing machines\",\r\n  \"basePrice\": 700,\r\n  \"parentName\": \"دکوراسیون ساختمان\"\r\n}\r\n{\r\n  \"name\": \"Home Cleaning\",\r\n  \"description\": \"Complete and professional home cleaning\",\r\n  \"basePrice\": 300,\r\n  \"parentName\": \"Cleaning and Hygiene\"\r\n}'",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/create-sub-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"create-sub-category"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:8080/v1/categories/create-sub-category' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"name\": \"wc\",\r\n  \"description\": \"clean wc and remove garbage\",\r\n  \"basePrice\": 200,\r\n  \"parentName\": \"wc\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-07-expert-signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"Expert1@\",\n  \"password\": \"Expert1@\",\n  \"firstName\": \"Expert1@\",\n  \"lastName\": \"Expert1@\",\n  \"email\": \"s.s.seyedein@outlook.com\",\n  \"address\": \"Expert1@\",\n  \"subCategoryNames\": [\n    \"Designer\"\n  ],\n  \"userType\": \"EXPERT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"signup"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/signup' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"expert1\",\n  \"password\": \"expert11\",\n  \"firstName\": \"expert1\",\n  \"lastName\": \"expert1\",\n  \"email\": \"expert1@gmail.com\",\n  \"address\": \"expert1\",\n  \"credit\": 0,\n  \"subCategoryNames\": [\n    \"طراح\"\n  ],\n  \"userType\": \"EXPERT\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-08-login-expert",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "049fb113-a728-4a25-b755-ab66ac88e881",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"s.s.seyedein@outlook.com\",\n  \"password\": \"Expert1@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/login' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"email\": \"customer111@yahoo.com\",\n  \"password\": \"customer111\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-09-all-users(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg4Mjk5NiwiZXhwIjoxNzQ0OTY5Mzk2fQ.eMN_JBoeevbiyWqSogTIh07caLtt6zyet1k9ot4O-IM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/all-user?pageNumber=0&size=10&sortBy=firstName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"all-user"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/v1/users/all-user?pageNumber=0&size=10&sortBy=firstName&sortDir=asc' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-10-approve-user(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYyMjIxMCwiZXhwIjoxNzQ0NzA4NjEwfQ.J_4rMEYHFiPugpOHbFbBKkKGC0paoH5BW4K_MdBenHU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/approve-user?email=s.s.seyedein@outlook.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"approve-user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "s.s.seyedein@outlook.com"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/v1/users/approve-user?email=expert1%40yahoo.com' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-11-create-order(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mainCategoryName\": \"دکوراسیون ساختمان\",\n  \"subCategoryName\": \"Designer\",\n  \"offerCustomerPrice\": 2000,\n  \"orderDate\": \"2026-04-07\",\n  \"orderDescription\": \"طراح طراح طراح\",\n  \"executionDate\": \"2026-04-07\",\n  \"orderAddress\": \"tehran\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/create-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"create-order"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/create-order?email=customer1%40yahoo.com&password=customer1' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"mainCategoryName\": \"دکوراسیون ساختمان\",\n  \"subCategoryName\": \"Designer\",\n  \"offerCustomerPrice\": 1000,\n  \"orderDate\": \"2025-04-04\",\n  \"orderDescription\": \"DesignerDesigner\",\n  \"executionDate\": \"2025-04-04\",\n  \"orderAddress\": \"tehran\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-12-show-orders(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYyMjUxMSwiZXhwIjoxNzQ0NzA4OTExfQ.8I24gnOf96AvSF7Rg4RPCEZLTzsvU7xXvH7YTpvj83M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/show-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"show-orders"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/v1/orders/show-orders?email=expert1%40yahoo.com&password=123' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-13-create-offer(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYxODU5MCwiZXhwIjoxNzQ0NzA0OTkwfQ.7ykazFoOsiaqMWebK8JgLj4tiujIOz-HAgY8hv2PBHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"orderNumber\": 1,\n  \"proposedPrice\": 1000,\n  \"estimatedTime\": 2,\n  \"availableTime\": \"Tomorrow at 11:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/experts/create-offer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"experts",
+						"create-offer"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/experts/create-offer?email=expert2%40gmail.com&password=expert11' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"orderNumber\": 1,\n  \"proposedPrice\": 444,\n  \"estimatedTime\": 2,\n  \"startTime\": \"20:50\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-14-show-sorting(desc-asc)-offer-by(proposedPrice)(expert.rating)(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjIyMzM3LCJleHAiOjE3NDQ3MDg3Mzd9.xLLR4d-ppOyfgplCFkPlkzM102_fMAz6bFgNTNy9FAY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/customers/order-offers?pageNumber=0&size=10&sortBy=expert.rating&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers",
+						"order-offers"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "expert.rating"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/customers/order-offers?email=customer1%40yahoo.com&password=customer1&pageNumber=0&size=10&sortBy=proposedPrice&sortDir=desc' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-15-1-all-orders-offers(customer)..........",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjIyMzM3LCJleHAiOjE3NDQ3MDg3Mzd9.xLLR4d-ppOyfgplCFkPlkzM102_fMAz6bFgNTNy9FAY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/customers/order-offers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customers",
+						"order-offers"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/customers/order-offers?email=customer1%40yahoo.com&password=123' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-15-approve-offer(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/update-status?status=WAITING_FOR_EXPERT_ARRIVAL&orderNumber=1&offerNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"update-status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "WAITING_FOR_EXPERT_ARRIVAL"
+						},
+						{
+							"key": "orderNumber",
+							"value": "1"
+						},
+						{
+							"key": "offerNumber",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/v1/orders/update-status?email=customer1%40yahoo.com&password=123&status=WAITING_FOR_EXPERT_ARRIVAL&orderNumber=1&offerNumber=1' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-16-start-working(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYxODU5MCwiZXhwIjoxNzQ0NzA0OTkwfQ.7ykazFoOsiaqMWebK8JgLj4tiujIOz-HAgY8hv2PBHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/update-status?status=STARTED&orderNumber=1&offerNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"update-status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "STARTED"
+						},
+						{
+							"key": "orderNumber",
+							"value": "1"
+						},
+						{
+							"key": "offerNumber",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/v1/orders/update-status?email=customer1%40yahoo.com&password=123&status=STARTED&orderNumber=1&offerNumber=1' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-17-complete-work(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYxODU5MCwiZXhwIjoxNzQ0NzA0OTkwfQ.7ykazFoOsiaqMWebK8JgLj4tiujIOz-HAgY8hv2PBHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/update-status?status=COMPLETED&orderNumber=1&offerNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"update-status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "COMPLETED"
+						},
+						{
+							"key": "orderNumber",
+							"value": "1"
+						},
+						{
+							"key": "offerNumber",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/v1/orders/update-status?email=customer1%40yahoo.com&password=123&status=COMPLETED&orderNumber=1&offerNumber=1' \\\r\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-18-add-balance(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYxODMxOSwiZXhwIjoxNzQ0NzA0NzE5fQ.arxvthYbujMSuvB8jmnqp7YNb-jublq-i1mM-Ly7DSE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/credits/add-balance?email=sanaz.seyedin@yahoo.com&balance=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"credits",
+						"add-balance"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sanaz.seyedin@yahoo.com"
+						},
+						{
+							"key": "balance",
+							"value": "2000"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/credits/add-balance?email=customer1%40yahoo.com&balance=2000' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "18-1-paid-by-credit(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/paid?orderNumber=1&offerNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"paid"
+					],
+					"query": [
+						{
+							"key": "orderNumber",
+							"value": "1"
+						},
+						{
+							"key": "offerNumber",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/orders/paid?orderNumber=1&offerNumber=1' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "add-bank-card(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cardNumber\": \"1666666666666666\",\n  \"cardHolderName\": \"customer1\",\n  \"expiryDate\": \"2028-04-07\",\n  \"cvv2\": 111,\n  \"password\": \"1111\",\n  \"balance\": 100000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/add/bank-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"add",
+						"bank-card"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/add-bank-card' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"cardNumber\": \"1\",\n  \"cardHolderName\": \"customer1\",\n  \"expiryDate\": \"2025-04-07\",\n  \"cvv\": 333,\n  \"password\": \"1\",\n  \"balance\": 10000\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "captcha-generate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/captcha/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"captcha",
+						"generate"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/captcha/generate' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "paid-online",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cardNumber\": \"1666666666666666\",\n  \"cardHolderName\": \"customer1\",\n  \"expiryDate\": \"2028-04-07\",\n  \"cvv2\": 111,\n  \"password\": \"1111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/paid/online?orderNumber=1&offerNumber=1&captchaId=71bcf043-21f9-4268-a4f9-544c4925df63&captchaCode=5050",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"paid",
+						"online"
+					],
+					"query": [
+						{
+							"key": "orderNumber",
+							"value": "1"
+						},
+						{
+							"key": "offerNumber",
+							"value": "1"
+						},
+						{
+							"key": "captchaId",
+							"value": "71bcf043-21f9-4268-a4f9-544c4925df63"
+						},
+						{
+							"key": "captchaCode",
+							"value": "5050"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/orders/paid/online?orderNumber=1&offerNumber=1&captchaId=s&captchaCode=s' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"cardNumber\": \"11\",\n  \"cvv\": 3,\n  \"password\": \"11\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "show-credit(customer-expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MTEwNzE2LCJleHAiOjE3NDQxOTcxMTZ9.oyZyrKVML_g7Xl_FLN4whNj1_r2nh5qasuHuwpSE2hI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/credits/show-credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"credits",
+						"show-credit"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/credits/show-credit' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-21-add-comment-and-rate(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rating\": 4,\r\n  \"comment\": \"good\",\r\n  \"orderNumber\": 1,\r\n  \"offerNumber\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/reviews/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"reviews",
+						"comment"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:8080/v1/reviews/comment?email=customer1%40yahoo.com&password=123' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"rating\": 4,\r\n  \"comment\": \"good\",\r\n  \"orderNumber\": 1,\r\n  \"offerNumber\": 1\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-22-get-comments(Expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYxODU5MCwiZXhwIjoxNzQ0NzA0OTkwfQ.7ykazFoOsiaqMWebK8JgLj4tiujIOz-HAgY8hv2PBHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/reviews/expert-comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"reviews",
+						"expert-comments"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/reviews/expert-comments?email=expert1%40yahoo.com&password=expert11' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-101-upload-photo(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFeHBlcnQxQCIsImlhdCI6MTc0NDYxODU5MCwiZXhwIjoxNzQ0NzA0OTkwfQ.7ykazFoOsiaqMWebK8JgLj4tiujIOz-HAgY8hv2PBHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"contentType": "image/jpeg",
+							"type": "file",
+							"src": "postman-cloud:///1f009a0c-3016-4030-bb74-93f73a333d3d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/upload-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"upload-image"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/upload-image?email=expert1%40yahoo.com' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: multipart/form-data' \\\n  -F 'image=@IMG_1933.jpg;type=image/jpeg'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-102-all-users-by-filter(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYxODMxOSwiZXhwIjoxNzQ0NzA0NzE5fQ.arxvthYbujMSuvB8jmnqp7YNb-jublq-i1mM-Ly7DSE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userType\": \"EXPERT\",\n  \"rating\": 4,\n  \"firstName\": \"expert1\",\n  \"lastName\": \"expert1\",\n  \"email\": \"expert1@yahoo.com\",\n  \"categoryNames\": [\n    \"Designer\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"filter-users"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"firstName\": \"expert1\",\n  \"lastName\": \"expert1\",\n  \"email\": \"expert1@yahoo.com\",\n  \"categoryNames\": [\n    \"wc\"\n  ]\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-103-all-main-category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYzMDkyNywiZXhwIjoxNzQ0NzE3MzI3fQ.yi-mMpGXuzPvSKBNMbNostx9OQNkuLKn4GFFBdzACiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/main-categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"main-categories"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/categories/main-categories' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-104-all-sub-category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYzMDkyNywiZXhwIjoxNzQ0NzE3MzI3fQ.yi-mMpGXuzPvSKBNMbNostx9OQNkuLKn4GFFBdzACiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/sub-categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"sub-categories"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/categories/sub-categories' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "105-all-categories-with-pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYzMDkyNywiZXhwIjoxNzQ0NzE3MzI3fQ.yi-mMpGXuzPvSKBNMbNostx9OQNkuLKn4GFFBdzACiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/pageable?pageNumber=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"pageable"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/categories/pageable?pageNumber=0&size=10' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-106-all-categories-with-pagination-sorting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYzMDkyNywiZXhwIjoxNzQ0NzE3MzI3fQ.yi-mMpGXuzPvSKBNMbNostx9OQNkuLKn4GFFBdzACiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/pageable-sort?pageNumber=0&size=10&sortBy=basePrice&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"pageable-sort"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "basePrice"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/categories/pageable-sort?pageNumber=0&size=10&sortBy=name&sortDir=asc' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "F-108-deleted-category-from-expert(admin-expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDc0OTIyNywiZXhwIjoxNzQ0ODM1NjI3fQ.bF-FcLXW6GVodPuX4LYMvpJDATWAcHvF_5bBmV_66i4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/expert-category?email=s.s.seyedein@outlook.com&categoryNames=Designer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"expert-category"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "s.s.seyedein@outlook.com"
+						},
+						{
+							"key": "categoryNames",
+							"value": "Designer"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/users/expert-category?email=expert1%40yahoo.com&categoryNames=wc' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-109-add-category(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MTEwNzE2LCJleHAiOjE3NDQxOTcxMTZ9.oyZyrKVML_g7Xl_FLN4whNj1_r2nh5qasuHuwpSE2hI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/add-expert-categories?categoryNames=Designer1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"add-expert-categories"
+					],
+					"query": [
+						{
+							"key": "categoryNames",
+							"value": "Designer1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/users/add-expert-categories?email=expert1%40yahoo.com&categoryNames=wc' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-110-add-categories-to-expert(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDc0OTIyNywiZXhwIjoxNzQ0ODM1NjI3fQ.bF-FcLXW6GVodPuX4LYMvpJDATWAcHvF_5bBmV_66i4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  \"Designer\"\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/admin/add-expert-subcategories?expertEmail=s.s.seyedein@outlook.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"admin",
+						"add-expert-subcategories"
+					],
+					"query": [
+						{
+							"key": "expertEmail",
+							"value": "s.s.seyedein@outlook.com"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/admin/add-expert-subcategories?adminEmail=admin1%40yahoo.com&adminPassword=admin123&expertEmail=expert1%40yahoo.com' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '[\n  \"Painter\"\n]'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-111-update-order(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lcjEiLCJpYXQiOjE3NDQxMTA2NTQsImV4cCI6MTc0NDE5NzA1NH0.NLxNUdGlP3nXIYet3UahtuCfD1DAoX19oqmcJbO5fnQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mainCategoryName\": \"دکوراسیون ساختمان\",\n  \"subCategoryName\": \"Designer1\",\n  \"offerCustomerPrice\": 100,\n  \"orderDate\": \"2026-04-06\",\n  \"orderDescription\": \"ssssss\",\n  \"executionDate\": \"2026-04-06\",\n  \"orderAddress\": \"tehran\"\n}\n{\n  \"offerCustomerPrice\": 6000,\n  \"orderDate\": \"2025-04-04\",\n  \"orderDescription\": \"update\",\n  \"executionDate\": \"2025-04-04\",\n  \"orderAddress\": \"teh\",\n  \"subCategoryName\": \"طراح\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/update-order?orderId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"update-order"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/orders/update-order?email=customer1%40yahoo.com&password=customer1&orderId=1' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"offerCustomerPrice\": 5000,\n  \"orderDate\": \"2025-03-25\",\n  \"orderDescription\": \"new new new\",\n  \"executionDate\": \"2025-03-25\",\n  \"orderAddress\": \"kish\",\n  \"subCategoryName\": \"طراحی\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-112-delete-order(customer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lcjEiLCJpYXQiOjE3NDQwNDU3NDQsImV4cCI6MTc0NDEzMjE0NH0.WJcFoHutLNHV791ds39LpSoEtdssQxiGTQyUDHEaXLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/delete-order?orderNumber=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"delete-order"
+					],
+					"query": [
+						{
+							"key": "orderNumber",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/orders/delete-order?email=customer1%40yahoo.com&password=customer1&orderNumber=9' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-113-order-history(customer)..........",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDdXN0b21lcjFAIiwiaWF0IjoxNzQ0NjE4NTU5LCJleHAiOjE3NDQ3MDQ5NTl9.4yvUsR9dy78ooaKyQlpgXh6-IoeczP4HaPJaJOi2ncc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/orders_history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"orders_history"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/orders/orders_history?email=expert%40yahoo.com&password=expert1' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-114-update-offer(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MDQ1OTU1LCJleHAiOjE3NDQxMzIzNTV9.CQrPnmFh_4pfluuy2ouzfGNHaf9Z9NIip7fDrrmvTfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"orderNumber\": 3,\n  \"proposedPrice\": 50,\n  \"estimatedTime\": 20,\n  \"startTime\": \"21:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/experts/update-offer?offerNumber=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"experts",
+						"update-offer"
+					],
+					"query": [
+						{
+							"key": "offerNumber",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/experts/update-offer?email=expert1%40yahoo.com&password=expert11&offerNumber=1' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"orderNumber\": 1,\n  \"proposedPrice\": 100,\n  \"estimatedTime\": 20,\n  \"startTime\": \"21:00\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-115-delete-offer(expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MDQ1OTU1LCJleHAiOjE3NDQxMzIzNTV9.CQrPnmFh_4pfluuy2ouzfGNHaf9Z9NIip7fDrrmvTfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/experts/delete-offer?offerNumber=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"experts",
+						"delete-offer"
+					],
+					"query": [
+						{
+							"key": "offerNumber",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/experts/delete-offer?email=expert1%40yahoo.com&password=expert11&offerNumber=3' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-116-update-users(customer & expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MDQ1OTU1LCJleHAiOjE3NDQxMzIzNTV9.CQrPnmFh_4pfluuy2ouzfGNHaf9Z9NIip7fDrrmvTfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"customer33\",\n  \"lastName\": \"customer33\",\n  \"address\": \"customer33\"\n}\n{\n  \"userName\": \"customer1\",\n  \"firstName\": \"customer1\",\n  \"lastName\": \"customer1\",\n  \"address\": \"customer1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/update_users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"update_users"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/users/update_users?email=customer1%40yahoo.com&password=customer1' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"customer33\",\n  \"firstName\": \"customer33\",\n  \"lastName\": \"customer33\",\n  \"address\": \"customer33\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-117-delete-user(customer & expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MDQ1OTU1LCJleHAiOjE3NDQxMzIzNTV9.CQrPnmFh_4pfluuy2ouzfGNHaf9Z9NIip7fDrrmvTfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/delete-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"delete-user"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/users/delete-user?email=customer1%40yahoo.com&password=customer1' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-118-delete-sub-category(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3NDQwNTIyMjEsImV4cCI6MTc0NDEzODYyMX0.yjjDmByP6GnFjm9P6Ivg-kap8vv0lypvVlEBPRLHSJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/delete-sub-category?subCategoryName=Designer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"delete-sub-category"
+					],
+					"query": [
+						{
+							"key": "subCategoryName",
+							"value": "Designer"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/categories/delete-sub-category?subCategoryName=Home%20Cleaning' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-F-119-delete-main-category(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3NDQxMTA2NDgsImV4cCI6MTc0NDE5NzA0OH0.ZNuNus6keF3WA4-O3kpKQGChFCDQSXKcZBBal7E2p5s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/categories/delete-main-category?mainCategoryName=دکوراسیون ساختمان",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"categories",
+						"delete-main-category"
+					],
+					"query": [
+						{
+							"key": "mainCategoryName",
+							"value": "دکوراسیون ساختمان"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\n  'http://localhost:8080/v1/categories/delete-main-category?mainCategoryName=Cleaning%20and%20Hygiene' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "j-100-update-password(customer-expert)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJleHBlcnQxIiwiaWF0IjoxNzQ0MDQ1OTU1LCJleHAiOjE3NDQxMzIzNTV9.CQrPnmFh_4pfluuy2ouzfGNHaf9Z9NIip7fDrrmvTfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/update-password?newPassword=expert1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"update-password"
+					],
+					"query": [
+						{
+							"key": "newPassword",
+							"value": "expert1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\n  'http://localhost:8080/v1/users/update-password?email=customer1%40yahoo.com&oldPassword=123&newPassword=111' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "............................captcha-verify.............................",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/captcha/verify?id=13be337b-4746-45d7-9d7b-1b859f8cccc7&code=5914",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"captcha",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13be337b-4746-45d7-9d7b-1b859f8cccc7"
+						},
+						{
+							"key": "code",
+							"value": "5914"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/captcha/verify?id=f0232394-a5a9-4c17-b355-037ef85d1dff&code=6807' \\\n  -H 'accept: */*' \\\n  -d ''"
+			},
+			"response": []
+		},
+		{
+			"name": "filter-users(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYxODMxOSwiZXhwIjoxNzQ0NzA0NzE5fQ.arxvthYbujMSuvB8jmnqp7YNb-jublq-i1mM-Ly7DSE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userType\": \"CUSTOMER\",\n  \"rating\": 0,\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"categoryNames\": [\n    \"string\"\n  ],\n  \"registrationStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"orderStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderEndDate\": \"2025-04-07T21:25:04.347Z\",\n  \"subCategoryName\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"filter-users"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userType\": \"CUSTOMER\",\n  \"rating\": 0,\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"categoryNames\": [\n    \"string\"\n  ],\n  \"registrationStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"orderStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderEndDate\": \"2025-04-07T21:25:04.347Z\",\n  \"subCategoryName\": \"string\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "filter-comprehensive-orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDc4NzgzMSwiZXhwIjoxNzQ0ODc0MjMxfQ.SwG50XZlLjY0q3O9ZbEHscPL3tX8N4IaCy3QS0eBfhg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"address\": \"string\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"CUSTOMER\",\n  \"role\": \"USER\",\n  \"orderNumber\": 0,\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-14\",\n  \"orderEndDate\": \"2025-04-14\",\n  \"executionDate\": \"2025-04-14\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"startWorkingTime\": \"2025-04-14T16:01:59.063Z\",\n  \"endWorkingTime\": \"2025-04-14T16:01:59.063Z\",\n  \"startWorkingDate\": \"2025-04-14\",\n  \"endWorkingDate\": \"2025-04-14\",\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"2025-04-14T16:01:59.063Z\",\n  \"expertRating\": 0,\n  \"categoryName\": \"Designer\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"دکوراسیون ساختمان\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"string\",\n  \"createdAtStart\": \"2025-04-14T16:01:59.063Z\",\n  \"createdAtEnd\": \"2025-04-14T16:01:59.063Z\",\n  \"updatedAtStart\": \"2025-04-14T16:01:59.063Z\",\n  \"updatedAtEnd\": \"2025-04-14T16:01:59.063Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"filter-comprehensive-orders"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "createdAt"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"address\": \"string\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"CUSTOMER\",\n  \"role\": \"USER\",\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-08\",\n  \"orderEndDate\": \"2025-04-08\",\n  \"executionDate\": \"2025-04-08\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"string\",\n  \"expertRating\": 0,\n  \"categoryName\": \"string\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"string\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"string\",\n  \"createdAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"createdAtEnd\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtEnd\": \"2025-04-08T09:12:01.203Z\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "filter-date-range(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDY0OTkxMiwiZXhwIjoxNzQ0NzM2MzEyfQ.-j4h3cPy4t2YLvirn6rZqacIX-UIBxoXg35x86FShNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"startWorkingDate\": \"2025-04-14\",\n  \"endWorkingDate\": \"2025-04-14\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/orders/working-date",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"orders",
+						"working-date"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/orders/working-date' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"startWorkingDate\": \"2025-04-14\",\n  \"endWorkingDate\": \"2025-04-14\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "get-Order-Report(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDY0OTkxMiwiZXhwIjoxNzQ0NzM2MzEyfQ.-j4h3cPy4t2YLvirn6rZqacIX-UIBxoXg35x86FShNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/orders-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"orders-status"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/orders/orders-status' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "filter-users-by-registrationStartDate(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDYxODMxOSwiZXhwIjoxNzQ0NzA0NzE5fQ.arxvthYbujMSuvB8jmnqp7YNb-jublq-i1mM-Ly7DSE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"registrationStartDate\": \"2025-04-07T21:25:04.347Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"filter-users"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userType\": \"CUSTOMER\",\n  \"rating\": 0,\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"categoryNames\": [\n    \"string\"\n  ],\n  \"registrationStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"orderStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderEndDate\": \"2025-04-07T21:25:04.347Z\",\n  \"subCategoryName\": \"string\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "get-Registration-Report(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDY0OTkxMiwiZXhwIjoxNzQ0NzM2MzEyfQ.-j4h3cPy4t2YLvirn6rZqacIX-UIBxoXg35x86FShNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/registrations?startDate=2025-04-13T21:25:04.347Z&endDate=2025-04-14T21:25:04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"registrations"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2025-04-13T21:25:04.347Z"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-04-14T21:25:04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/registrations?startDate=2025-04-07T21%3A25%3A04.347Z&endDate=2025-04-07T21%3A25%3A04.347Z' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "get-Expert-&-Customer->Order-Report(admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDcwOTMwMiwiZXhwIjoxNzQ0Nzk1NzAyfQ.0gWYdfLe3dCV7bJHmDjEQZeCAkRUVFcb061oCgmgrdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/users-summary?registrationStartDate=2025-04-07T21%3A25%3A04.347Z&registrationEndDate=2025-04-07T21%3A25%3A04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"users-summary"
+					],
+					"query": [
+						{
+							"key": "registrationStartDate",
+							"value": "2025-04-07T21%3A25%3A04.347Z"
+						},
+						{
+							"key": "registrationEndDate",
+							"value": "2025-04-07T21%3A25%3A04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/users-summary?registrationStartDate=2025-04-07&registrationEndDate=2025-04-07' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "resend-verification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/resend-verification?email=s.s.seyedein@outlook.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"resend-verification"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "s.s.seyedein@outlook.com"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/resend-verification?email=s.s.seyedein%40outlook.com' \\\n  -H 'accept: */*' \\\n  -d ''"
+			},
+			"response": []
+		},
+		{
+			"name": "لیست تمامی مشتریان و متخصصان - فیلتر(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MjYxMiwiZXhwIjoxNzQ0OTc5MDEyfQ.PGsq729vTjMGZThcetvz2E9POwy4hkDrAlukMDFCrfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userType\": \"EXPERT\",\n  \"rating\": 0,\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"categoryNames\": [\n    \"Designer\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"filter-users"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/users/filter-users?pageNumber=0&size=10&sortBy=firstName&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userType\": \"CUSTOMER\",\n  \"rating\": 0,\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"categoryNames\": [\n    \"string\"\n  ],\n  \"registrationStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"orderStartDate\": \"2025-04-07T21:25:04.347Z\",\n  \"orderEndDate\": \"2025-04-07T21:25:04.347Z\",\n  \"subCategoryName\": \"string\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "تاریخچه کاملی از خدمات گرفته شده و انجام شده با جزئیات(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MTQ1OSwiZXhwIjoxNzQ0OTc3ODU5fQ.QYkkPixFkQiBMdqbFRY3neAGHkz_oqGsQlg70xWBxP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"Customer1@\",\n  \"firstName\": \"Customer1@\",\n  \"lastName\": \"Customer1@\",\n  \"email\": \"sanaz.seyedin@yahoo.com\",\n  \"address\": \"Customer1@\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"CUSTOMER\",\n  \"role\": \"USER\",\n  \"orderNumber\": 0,\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-17\",\n  \"orderEndDate\": \"2025-04-17\",\n  \"executionDate\": \"2025-04-17\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"startWorkingTime\": \"2025-04-17T12:13:17.287Z\",\n  \"endWorkingTime\": \"2025-04-17T12:13:17.287Z\",\n  \"startWorkingDate\": \"2025-04-17\",\n  \"endWorkingDate\": \"2025-04-17\",\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"2025-04-17T12:13:17.287Z\",\n  \"expertRating\": 0,\n  \"categoryName\": \"Designer\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"دکوراسیون ساختمان\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"good\",\n  \"createdAtStart\": \"2025-04-17T12:13:17.287Z\",\n  \"createdAtEnd\": \"2025-04-17T12:13:17.287Z\",\n  \"updatedAtStart\": \"2025-04-17T12:13:17.287Z\",\n  \"updatedAtEnd\": \"2025-04-17T12:13:17.287Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"filter-comprehensive-orders"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "createdAt"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"orderNumber\": 0,\n  \"userName\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"address\": \"string\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"EXPE\",\n  \"role\": \"USER\",\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-17\",\n  \"orderEndDate\": \"2025-04-17\",\n  \"executionDate\": \"2025-04-17\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"startWorkingTime\": \"2025-04-17T12:03:12.257Z\",\n  \"endWorkingTime\": \"2025-04-17T12:03:12.257Z\",\n  \"startWorkingDate\": \"2025-04-17\",\n  \"endWorkingDate\": \"2025-04-17\",\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"2025-04-17T12:03:12.257Z\",\n  \"expertRating\": 0,\n  \"categoryName\": \"string\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"string\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"string\",\n  \"createdAtStart\": \"2025-04-17T12:03:12.257Z\",\n  \"createdAtEnd\": \"2025-04-17T12:03:12.257Z\",\n  \"updatedAtStart\": \"2025-04-17T12:03:12.257Z\",\n  \"updatedAtEnd\": \"2025-04-17T12:03:12.257Z\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "تعداد سفارشات کامل شده & ثبت شده(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDcwOTMwMiwiZXhwIjoxNzQ0Nzk1NzAyfQ.0gWYdfLe3dCV7bJHmDjEQZeCAkRUVFcb061oCgmgrdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/orders-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"orders-status"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/orders/orders-status' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "تاریخچه تمامی سفارشات بر اساس بازه زمانی(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MTQ1OSwiZXhwIjoxNzQ0OTc3ODU5fQ.QYkkPixFkQiBMdqbFRY3neAGHkz_oqGsQlg70xWBxP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"startWorkingDate\": \"2025-04-16\",\n  \"endWorkingDate\": \"2025-04-16\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/orders/working-date",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"orders",
+						"working-date"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/orders/working-date' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"startWorkingDate\": \"2025-04-14\",\n  \"endWorkingDate\": \"2025-04-14\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "تاریخچه تمامی سفارشات بر اساس وضعیت سفارش(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MTQ1OSwiZXhwIjoxNzQ0OTc3ODU5fQ.QYkkPixFkQiBMdqbFRY3neAGHkz_oqGsQlg70xWBxP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_SELECTION_BY_CUSTOMER\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_ARRIVAL\",\n  \"orderStatus\": \"STARTED\",\n  \"orderStatus\": \"COMPLETED\",\n  \"orderStatus\": \"PAID\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"filter-comprehensive-orders"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "createdAt"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"address\": \"string\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"CUSTOMER\",\n  \"role\": \"USER\",\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-08\",\n  \"orderEndDate\": \"2025-04-08\",\n  \"executionDate\": \"2025-04-08\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"string\",\n  \"expertRating\": 0,\n  \"categoryName\": \"string\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"string\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"string\",\n  \"createdAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"createdAtEnd\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtEnd\": \"2025-04-08T09:12:01.203Z\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "تاریخچه تمامی سفارشات بر اساس خدمت و زیرخدمت(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MTQ1OSwiZXhwIjoxNzQ0OTc3ODU5fQ.QYkkPixFkQiBMdqbFRY3neAGHkz_oqGsQlg70xWBxP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"categoryName\": \"Designer\",\n  \"parentCategoryName\": \"دکوراسیون ساختمان\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"filter-comprehensive-orders"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "createdAt"
+						},
+						{
+							"key": "sortDir",
+							"value": "asc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/v1/orders/filter-comprehensive-orders?pageNumber=0&size=10&sortBy=createdAt&sortDir=asc' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"userName\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"address\": \"string\",\n  \"userStatus\": \"NEW\",\n  \"userType\": \"CUSTOMER\",\n  \"role\": \"USER\",\n  \"finalPrice\": 0,\n  \"orderStartDate\": \"2025-04-08\",\n  \"orderEndDate\": \"2025-04-08\",\n  \"executionDate\": \"2025-04-08\",\n  \"orderAddress\": \"string\",\n  \"orderDescription\": \"string\",\n  \"orderStatus\": \"WAITING_FOR_EXPERT_PROPOSALS\",\n  \"offerCustomerPrice\": 0,\n  \"proposedPrice\": 0,\n  \"estimatedTime\": 0,\n  \"startTime\": \"string\",\n  \"expertRating\": 0,\n  \"categoryName\": \"string\",\n  \"categoryDescription\": \"string\",\n  \"categoryBasePrice\": 0,\n  \"parentCategoryName\": \"string\",\n  \"reviewRating\": 0,\n  \"reviewComment\": \"string\",\n  \"createdAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"createdAtEnd\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtStart\": \"2025-04-08T09:12:01.203Z\",\n  \"updatedAtEnd\": \"2025-04-08T09:12:01.203Z\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "گزارشگیری از متخصصان و مشتریان بر اساس زمان ثبت نام(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MjYxMiwiZXhwIjoxNzQ0OTc5MDEyfQ.PGsq729vTjMGZThcetvz2E9POwy4hkDrAlukMDFCrfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/registrations?startDate=2025-04-13T21:25:04.347Z&endDate=2025-05-14T21:25:04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"registrations"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2025-04-13T21:25:04.347Z"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-05-14T21:25:04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/registrations?startDate=2025-04-07T21%3A25%3A04.347Z&endDate=2025-04-07T21%3A25%3A04.347Z' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "گزارشگیری از متخصصان بر اساس تعداد درخواستهای ثبت کرده(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MjYxMiwiZXhwIjoxNzQ0OTc5MDEyfQ.PGsq729vTjMGZThcetvz2E9POwy4hkDrAlukMDFCrfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/users-summary-by-email?email=s.s.seyedein@outlook.com&registrationStartDate=2025-04-13T21%3A25%3A04.347Z&registrationEndDate=2025-05-14T21%3A25%3A04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"users-summary-by-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "s.s.seyedein@outlook.com"
+						},
+						{
+							"key": "registrationStartDate",
+							"value": "2025-04-13T21%3A25%3A04.347Z"
+						},
+						{
+							"key": "registrationEndDate",
+							"value": "2025-05-14T21%3A25%3A04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/users-summary-by-email?email=sanaz.seyedin%40yahoo.com&registrationStartDate=2025-04-13T21%3A25%3A04.347Z&registrationEndDate=2025-04-13T21%3A25%3A04.347Z' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "گزارشگیری از متخصصان و مشتریان بر اساس تعداد(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDcwOTMwMiwiZXhwIjoxNzQ0Nzk1NzAyfQ.0gWYdfLe3dCV7bJHmDjEQZeCAkRUVFcb061oCgmgrdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/users-summary?registrationStartDate=2025-04-13T21:25:04.347Z&registrationEndDate=2025-04-13T21:25:04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"users-summary"
+					],
+					"query": [
+						{
+							"key": "registrationStartDate",
+							"value": "2025-04-13T21:25:04.347Z"
+						},
+						{
+							"key": "registrationEndDate",
+							"value": "2025-04-13T21:25:04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/users-summary?registrationStartDate=2025-04-07&registrationEndDate=2025-04-07' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "گزارشگیری ازمشتریان بر اساس تعداد  سفارشات انجام داده شده(admin) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjExQCIsImlhdCI6MTc0NDg5MjYxMiwiZXhwIjoxNzQ0OTc5MDEyfQ.PGsq729vTjMGZThcetvz2E9POwy4hkDrAlukMDFCrfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/users-summary-by-email?email=sanaz.seyedin@yahoo.com&registrationStartDate=2025-04-13T21%3A25%3A04.347Z&registrationEndDate=2025-05-14T21%3A25%3A04.347Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"users-summary-by-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sanaz.seyedin@yahoo.com"
+						},
+						{
+							"key": "registrationStartDate",
+							"value": "2025-04-13T21%3A25%3A04.347Z"
+						},
+						{
+							"key": "registrationEndDate",
+							"value": "2025-05-14T21%3A25%3A04.347Z"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/v1/users/users-summary-by-email?email=sanaz.seyedin%40yahoo.com&registrationStartDate=2025-04-13T21%3A25%3A04.347Z&registrationEndDate=2025-04-13T21%3A25%3A04.347Z' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		}
+	]
+}
